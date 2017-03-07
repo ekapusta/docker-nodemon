@@ -1,10 +1,5 @@
-FROM node:6-alpine
+FROM node:7
 MAINTAINER Dmitry Romanov "dmitry.romanov85@gmail.com"
-
-ENV PHANTOMJS_VERSION 2.1.1
-COPY *.patch /
-RUN apk add --no-cache --virtual .build-deps \
-		python
 
 RUN ["npm", "install", "-g", "nodemon"]
 
